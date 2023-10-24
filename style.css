@@ -1,0 +1,8 @@
+.calculator{
+    background-color: black;
+    padding:10px;
+}
+.display{
+    width: 100%;
+    height:65%;
+}

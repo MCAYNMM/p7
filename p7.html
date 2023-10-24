@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="score"></h1>
+
+
+<h1>caculator</h1>
+<input type="number" id="num1">
+<input type="number" id="num2">
+<button onclick="add()">+</button>
+<button onclick="sub()">-</button>
+<button onclick="nhan()">*</button>
+<button onclick="chia()">/</button>
+<h1 id="result"></h1>
+
+
+<h1>Chuyển đổi tiền tệ</h1>
+<input type="number" name="sotien" id="amount">
+<br> <br>
+<select name="" id="form">
+    <option value="23000">vn</option>
+    <option value="1700">usd</option>
+</select>
+<button onclick="doi()">doi</button>
+<h2 id="cv"></h2>
+<script>
+    function doi() {
+        let fg = document.getElementById('form').value;
+        let ui = document.getElementById('amount').value;
+        if(fg == 23000){
+            document.getElementById('cv').innerHTML= fg*ui;
+        }
+        else{
+            document.getElementById('cv').innerHTML= ui / fg;
+        }
+
+    }
+
+    let x = +prompt("hoa");
+    let y = +prompt("hoa");
+    let z = +prompt("hoa");
+    let s = (x + y + z) / 3;
+    document.getElementById('score').innerHTML = "phương trình nhập điểm của một sinh viên: " + s;
+
+    function add() {
+        let t = document.getElementById('num1').value + document.getElementById('num2').value;
+        document.getElementById('result').innerHTML = t;
+    }
+
+    function sub() {
+        let t = document.getElementById('num1').value - document.getElementById('num2').value;
+        document.getElementById('result').innerHTML = t;
+    }
+
+    function nhan() {
+        let t = document.getElementById('num1').value * document.getElementById('num2').value;
+        document.getElementById('result').innerHTML = t;
+    }
+
+    function chia() {
+        let t = document.getElementById('num1').value / document.getElementById('num2').value;
+        document.getElementById('result').innerHTML = t;
+    }
+
+</script>
+
+</body>
+</html>
